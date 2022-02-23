@@ -1,0 +1,30 @@
+{% extends "./baseAuth.html" %}
+
+{% block body %}
+<div class="row">
+    
+        
+        <div class="col-md-4 offset-md-4">
+            <div class="card-body"> 
+                <h1>LOGIN</h1>
+                <form method="POST">{% csrf_token %}
+                    <div class="form-group py-3">
+                        <input type="text" name="username" 
+                        class="form-control" placeholder="Nombre de Usuario" 
+                        required>
+                    </div>
+                    <div class="form-group py-3">
+                        <input type="password" name="password" 
+                        class="form-control" placeholder="Contraseña" 
+                        >
+                    </div>
+                    <div class="form-group">
+                       <button class="btn btn-success" type="submit" id="submit">Log In</button>
+                    </div>
+                    <a href="/registrar">Registrarse</a>
+                </form>
+            </div>
+        </div>
+    
+</div>
+{% endblock %}
